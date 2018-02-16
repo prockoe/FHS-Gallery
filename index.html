@@ -34,7 +34,7 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity id="teleHand" vive-controls="hand: left" teleport-controls="type:parabolic"></a-entity>
     <a-entity id="blockHand" vive-controls="hand: right"></a-entity>
 
-    <a-entity camera="userHeight: 1.6"
+    <a-entity position="0 1.6 0" camera
               universal-controls="movementControls: keyboard"
               keyboard-controls="mode: animate">
       <a-entity cursor
