@@ -31,8 +31,8 @@ AFRAME.registerComponent('cursor-listener', {
     <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
     <a-sky color="#ECECEC"></a-sky>
 
-    <a-entity id="teleHand" vive-controls="hand: left" teleport-controls="type:parabolic"></a-entity>
-    <a-entity id="blockHand" vive-controls="hand: right"></a-entity>
+    <a-entity id="teleHand" laser-controls="hand: left" teleport-controls="type:parabolic"></a-entity>
+    <a-entity id="otherHand" laser-controls="hand: right"></a-entity>
 
     <a-entity camera="userHeight: 1.6" universal-controls look-controls keyboard-controls="mode: animate">
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
