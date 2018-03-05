@@ -1,8 +1,9 @@
 <head>
-  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-area-light-component/dist/aframe-area-light-component.min.js"></script>
 </head>
 
 <script>
@@ -28,8 +29,18 @@ AFRAME.registerComponent('cursor-listener', {
     </a-box>
     <a-sphere cursor-listener position="-4 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
     <a-cylinder cursor-listener position="-3 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-    <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
-    <a-sky color="#ECECEC"></a-sky>
+
+    <!-- Default lighting injected by A-Frame. -->
+    <a-light type="ambient" intensity=".5" color="#BBB"></a-light>
+    <!-- Default lighting injected by A-Frame. -->
+
+    <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 4" rotation="90 0 0"></a-entity>
+    <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 -4.25" rotation="90 0 0"></a-entity>
+
+    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-7.6 6 9.5" rotation="-53 -180 -180"></a-entity>
+    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.75 6 9.5" rotation="-53 -180 -180"></a-entity>
+    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.1 6 9.5" rotation="-53 -180 -180"></a-entity>
+    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="7 6 9.5" rotation="-53 -180 -180"></a-entity>
 
     <a-entity id="teleHand" laser-controls="hand: left" teleport-controls="type:parabolic"></a-entity>
     <a-entity id="otherHand" laser-controls="hand: right"></a-entity>
