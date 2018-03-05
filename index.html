@@ -22,6 +22,12 @@ AFRAME.registerComponent('cursor-listener', {
 
 <body>
   <a-scene>
+    <a-assets>
+      <a-asset-item id="basewalls" src="models/basewalls.obj"></a-asset-item>
+      <a-asset-item id="baseskylights" src="models/baseskylights.obj"></a-asset-item>
+      <a-asset-item id="baselights" src="models/baselights.obj"></a-asset-item>
+    </a-assets>
+
     <a-box cursor-listener position="-5 0.5 -3" rotation="0 45 0" material="color: #4CC3D9">
       <a-sphere position="0 1 0" scale=".25 .25 .25">
         <a-animation attribute="position" to="0 1.25 0" direction="alternate" dur="750" repeat="indefinite"></a-animation>
@@ -42,6 +48,10 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.1 6 9.5" rotation="-53 -180 -180"></a-entity>
     <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="7 6 9.5" rotation="-53 -180 -180"></a-entity>
 
+    <a-entity obj-model="obj: #basewalls;" scale=".01 .01 .01" material="color: #faa"></a-entity>
+    <a-entity obj-model="obj: #baseskylights;" scale=".01 .01 .01"></a-entity>
+    <a-entity obj-model="obj: #baselights;" scale=".01 .01 .01" material="color: #5a5a5a"></a-entity>
+
     <a-entity id="teleHand" laser-controls="hand: left" teleport-controls="type:parabolic"></a-entity>
     <a-entity id="otherHand" laser-controls="hand: right"></a-entity>
 
@@ -49,6 +59,6 @@ AFRAME.registerComponent('cursor-listener', {
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
     </a-entity>
 
-    <a-entity environment="preset: yavapai; ground: canyon;"></a-entity>
+    <!-- <a-entity environment="preset: yavapai; ground: canyon;"></a-entity> -->
   </a-scene>
 </body>
