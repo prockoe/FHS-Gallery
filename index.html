@@ -42,15 +42,16 @@ AFRAME.registerComponent('cursor-listener', {
 
     <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 4" rotation="90 0 0"></a-entity>
     <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 -4.25" rotation="90 0 0"></a-entity>
+    <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    <a-entity rotation="0 90 0">
 
-    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-7.6 6 9.5" rotation="-53 -180 -180"></a-entity>
-    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.75 6 9.5" rotation="-53 -180 -180"></a-entity>
-    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.1 6 9.5" rotation="-53 -180 -180"></a-entity>
-    <a-entity light="type: spot; intensity: 0.75; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="7 6 9.5" rotation="-53 -180 -180"></a-entity>
-
+    </a-entity>
     <a-entity obj-model="obj: #basewalls;" scale=".01 .01 .01" material="color: #faa"></a-entity>
     <a-entity obj-model="obj: #baseskylights;" scale=".01 .01 .01"></a-entity>
-    <a-entity obj-model="obj: #baselights;" scale=".01 .01 .01" material="color: #5a5a5a"></a-entity>
+    <a-entity obj-model="obj: #baselights;" scale=".0115 .0115 .0115" position="0 -1.5 0" material="color: #5a5a5a"></a-entity>
 
     <a-entity id="teleHand" laser-controls="hand: left" teleport-controls="type:parabolic"></a-entity>
     <a-entity id="otherHand" laser-controls="hand: right"></a-entity>
