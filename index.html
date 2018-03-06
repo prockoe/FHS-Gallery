@@ -21,7 +21,7 @@ AFRAME.registerComponent('cursor-listener', {
 </script>
 
 <body>
-  <a-scene>
+  <a-scene background="color:#555;">
     <a-assets>
       <a-asset-item id="basewalls" src="models/basewalls.obj"></a-asset-item>
       <a-asset-item id="baseskylights" src="models/baseskylights.obj"></a-asset-item>
@@ -47,8 +47,24 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity rotation="0 90 0">
-
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     </a-entity>
+    <a-entity rotation="0 180 0">
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    </a-entity>
+    <a-entity rotation="0 270 0">
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+      <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    </a-entity>
+
     <a-entity obj-model="obj: #basewalls;" scale=".01 .01 .01" material="color: #faa"></a-entity>
     <a-entity obj-model="obj: #baseskylights;" scale=".01 .01 .01"></a-entity>
     <a-entity obj-model="obj: #baselights;" scale=".0115 .0115 .0115" position="0 -1.5 0" material="color: #5a5a5a"></a-entity>
