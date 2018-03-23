@@ -2,7 +2,6 @@
   <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
-  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   <script src="https://unpkg.com/aframe-area-light-component/dist/aframe-area-light-component.min.js"></script>
 </head>
 
@@ -75,7 +74,5 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity camera="userHeight: 1.6" universal-controls look-controls keyboard-controls="mode: animate">
       <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
     </a-entity>
-
-    <!-- <a-entity environment="preset: yavapai; ground: canyon;"></a-entity> -->
   </a-scene>
 </body>
