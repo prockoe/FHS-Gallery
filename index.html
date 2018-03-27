@@ -3,6 +3,7 @@
   <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.0/dist/aframe-extras.min.js"></script>
   <!-- <script src="https://unpkg.com/aframe-area-light-component/dist/aframe-area-light-component.min.js"></script> -->
+  <script src="https://rawgit.com/chenzlabs/auto-detect-controllers/master/dist/aframe-auto-detect-controllers-component.min.js"></script>
 </head>
 
 <script>
@@ -36,11 +37,12 @@ AFRAME.registerComponent('cursor-listener', {
     <a-cylinder cursor-listener position="-3 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
 
     <!-- Default lighting injected by A-Frame. -->
-    <a-light type="ambient" intensity=".75" color="#B99"></a-light>
+    <a-light type="ambient" intensity=".5" color="#BBB"></a-light>
+    <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="0 1 0"></a-entity>
     <!-- Default lighting injected by A-Frame. -->
 
-    <!-- <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 4" rotation="90 0 0"></a-entity>
-    <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 -4.25" rotation="90 0 0"></a-entity> -->
+    <!-- <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 4" rotation="90 0 0"></a-entity> -->
+    <!-- <a-entity area-light="intensity:15; color:#effaFF; width:15.2; height:7;" position="-7.75 7.25 -4.25" rotation="90 0 0"></a-entity> -->
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
@@ -65,15 +67,16 @@ AFRAME.registerComponent('cursor-listener', {
     </a-entity>
 
     <a-entity obj-model="obj: #basewalls;" scale=".01 .01 .01" material="color: #faa"></a-entity>
-    <a-entity obj-model="obj: #baseskylights;" scale=".01 .01 .01"></a-entity>
+    <a-entity obj-model="obj: #baseskylights;" scale=".01 .01 .01"  material="color: #fff; emissive: #eef;"></a-entity>
     <a-entity obj-model="obj: #baselights;" scale=".0115 .0115 .0115" position="0 -1.5 0" material="color: #5a5a5a"></a-entity>
 
     <a-entity id="rig" movement-controls>
       <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled:true">
         <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
-        <!-- <a-entity teleport-controls hand-controls="left"></a-entity>
-        <a-entity teleport-controls hand-controls="right"></a-entity> -->
       </a-entity>
     </a-entity>
+    <!-- If detected, will use built-in controller model (e.g. Oculus Touch or Vive) -->
+    <a-entity id="lefthand" auto-detect-controllers="hand:left"></a-entity>
+    <a-entity id="righthand" auto-detect-controllers="hand:right"></a-entity>
   </a-scene>
 </body>
