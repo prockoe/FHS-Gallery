@@ -2,7 +2,6 @@
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.0/dist/aframe-extras.min.js"></script>
-  <script src="https://rawgit.com/chenzlabs/auto-detect-controllers/master/dist/aframe-auto-detect-controllers-component.min.js"></script>
 </head>
 
 <script>
@@ -25,6 +24,7 @@ AFRAME.registerComponent('cursor-listener', {
       <a-asset-item id="basewalls" src="models/basewalls.obj"></a-asset-item>
       <a-asset-item id="baseskylights" src="models/baseskylights.obj"></a-asset-item>
       <a-asset-item id="baselights" src="models/baselights.obj"></a-asset-item>
+      <a-asset-item id="basefloor" src="models/basefloor.obj"></a-asset-item>
     </a-assets>
 
     <a-box cursor-listener position="-5 0.5 -3" rotation="0 45 0" material="color: #4CC3D9">
@@ -66,14 +66,12 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity obj-model="obj: #basewalls;" scale=".01 .01 .01" material="color: #faa"></a-entity>
     <a-entity obj-model="obj: #baseskylights;" scale=".01 .01 .01"  material="color: #fff; emissive: #eef;"></a-entity>
     <a-entity obj-model="obj: #baselights;" scale=".0115 .0115 .0115" position="0 -1.5 0" material="color: #5a5a5a"></a-entity>
+    <a-entity visible="false" obj-model="obj: #basefloor;" scale=".0095 .0095 .0095" material="color: #A00" nav-mesh></a-entity>
 
-    <a-entity id="rig" movement-controls>
+    <a-entity id="rig" movement-controls> <!-- Use this for nav-mesh once you have one ="constrainToNavMesh: true" -->
       <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled:true">
         <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
       </a-entity>
     </a-entity>
-    <!-- If detected, will use built-in controller model (e.g. Oculus Touch or Vive) -->
-    <a-entity id="lefthand" auto-detect-controllers="hand:left"></a-entity>
-    <a-entity id="righthand" auto-detect-controllers="hand:right"></a-entity>
   </a-scene>
 </body>
