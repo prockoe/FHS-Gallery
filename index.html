@@ -72,8 +72,8 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity gltf-model="#floor-gltf" scale=".0075 .0075 .0075" material="color: #A00" nav-mesh></a-entity>
 
     <a-entity id="rig" movement-controls> <!-- Use this for nav-mesh once you have one ="constrainToNavMesh: true" -->
-      <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled:true">
-        <!-- <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity> -->
+      <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true">
+        <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
       </a-entity>
     </a-entity>
   </a-scene>
