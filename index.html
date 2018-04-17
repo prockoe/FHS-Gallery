@@ -24,10 +24,10 @@ AFRAME.registerComponent('cursor-listener', {
       <a-asset-item id="walls-obj" src="models/basewalls.obj"></a-asset-item>
       <a-asset-item id="skylights-obj" src="models/baseskylights.obj"></a-asset-item>
       <a-asset-item id="lights-obj" src="models/baselights.obj"></a-asset-item>
-      <!-- <a-asset-item id="walls-mtl" src="models/basewalls.mtl"></a-asset-item>
-      <a-asset-item id="skylights-mtl" src="models/baseskylights.mtl"></a-asset-item>
-      <a-asset-item id="lights-mtl" src="models/baselights.mtl"></a-asset-item> -->
+      <a-asset-item id="canvas-obj" src="models/canvas trial.obj"></a-asset-item>
       <a-asset-item id="floor-gltf" src="models/basefloor.glb"></a-asset-item>
+
+      <img id="social-media" src="../artwork/socials.jpg">
     </a-assets>
 
     <a-box cursor-listener position="-5 0.5 -3" rotation="0 45 0" material="color: #4CC3D9">
@@ -39,11 +39,11 @@ AFRAME.registerComponent('cursor-listener', {
     <a-cylinder cursor-listener position="-3 0.75 -3" radius="0.5" height="1.6" color="#FFC65D"></a-cylinder>
 
     <!-- Default lighting injected by A-Frame. -->
-    <a-light type="ambient" intensity=".75" color="#BBB"></a-light>
-    <a-entity light="type: spot; color: #dde; intensity: 0.5; penumbra: 1;" position="0 14 0" rotation="-90 0 0"></a-entity>
+    <a-light type="ambient" intensity="1" color="#CBB"></a-light>
+    <a-entity light="type: spot; color: #edd; intensity: 0.5; penumbra: 1;" position="0 14 0" rotation="-90 0 0"></a-entity>
     <!-- Default lighting injected by A-Frame. -->
 
-    <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
+    <!-- <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-8.65 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
     <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
@@ -64,12 +64,13 @@ AFRAME.registerComponent('cursor-listener', {
       <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="-2.9 5.35 10.85" rotation="-70 -180 -180"></a-entity>
       <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="2.8 5.35 10.85" rotation="-70 -180 -180"></a-entity>
       <a-entity light="type: spot; angle: 75; intensity: 1; distance: 15; decay: 5; penumbra: 1" color="#FFC65D" position="8.53 5.35 10.85" rotation="-70 -180 -180"></a-entity>
-    </a-entity>
+    </a-entity> -->
 
-    <a-entity obj-model="obj: #walls-obj; mtl:" scale=".01 .01 .01" material="color: #faa"></a-entity>
+    <a-entity obj-model="obj: #walls-obj; mtl:" scale=".01 .01 .01" material="color: #fff"></a-entity>
     <a-entity obj-model="obj: #skylights-obj;" scale=".01 .01 .01"  material="color: #dde; emissive: #dde;"></a-entity>
-    <a-entity obj-model="obj: #lights-obj;" scale=".0115 .0115 .0115" position="0 -1.5 0" material="color: #5a5a5a"></a-entity>
-    <a-entity gltf-model="#floor-gltf" scale=".0075 .0075 .0075" material="color: #A00" nav-mesh></a-entity>
+    <a-entity obj-model="obj: #lights-obj;" scale=".01 .01 .01" material="color: #5a5a5a"></a-entity>
+    <a-entity obj-model="obj: #canvas-obj;" scale=".01 .01 .01" material="src: #social-media;"></a-entity>
+    <a-entity gltf-model="#floor-gltf" scale=".0075 .0075 .0075" material="color: #ecc" nav-mesh></a-entity>
 
     <a-entity id="rig" movement-controls> <!-- Use this for nav-mesh once you have one ="constrainToNavMesh: true" -->
       <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true">
