@@ -1,7 +1,7 @@
 <head>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
-  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.0.0/dist/aframe-extras.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.0/dist/aframe-extras.min.js"></script>
 </head>
 
 <script>
@@ -71,9 +71,16 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity obj-model="obj: #walls-obj;" scale=".01 .01 .01" material="color: #fff"></a-entity>
     <a-entity obj-model="obj: #skylights-obj;" scale=".01 .01 .01"  material="color: #dde; emissive: #dde;"></a-entity>
     <a-entity obj-model="obj: #lights-obj;" scale=".01 .01 .01" material="color: #5a5a5a"></a-entity>
-    <a-entity gltf-model="#floor-gltf" scale=".0075 .0075 .0075" material="color: #ecc" nav-mesh></a-entity>
+    <a-entity obj-model="obj: #canvas-obj; mtl: #canvas-mtl;" scale=".01 .01 .01"></a-entity>
 
-    <a-entity id="rig" movement-controls> <!-- Use this for nav-mesh once you have one ="constrainToNavMesh: true" -->
+    <a-entity scale="24 24 24">
+      <a-entity geometry="primitive: plane;"
+                rotation="-90 0 0"
+                visible="false"
+                nav-mesh></a-entity>
+    </a-entity>
+
+    <a-entity id="rig" movement-controls="constrainToNavMesh: true"> <!-- Use this for nav-mesh once you have one ="constrainToNavMesh: true" -->
       <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true">
         <a-entity cursor position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;"></a-entity>
       </a-entity>
