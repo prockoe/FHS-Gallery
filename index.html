@@ -27,6 +27,8 @@ AFRAME.registerComponent('cursor-listener', {
       <a-asset-item id="canvas-obj" src="models/newcanvas.obj"></a-asset-item>
       <a-asset-item id="canvas-mtl" src="models/newcanvas.mtl"></a-asset-item>
       <a-asset-item id="floor-gltf" src="models/basefloor.glb"></a-asset-item>
+      <a-asset-item id="canvas-glb" src="models/newcanvas.glb"></a-asset-item>
+
 
       <img id="social-media" src="artwork/canvas1.png">
     </a-assets>
@@ -71,7 +73,7 @@ AFRAME.registerComponent('cursor-listener', {
     <a-entity obj-model="obj: #walls-obj;" scale=".01 .01 .01" material="color: #fff"></a-entity>
     <a-entity obj-model="obj: #skylights-obj;" scale=".01 .01 .01"  material="color: #dde; emissive: #dde;"></a-entity>
     <a-entity obj-model="obj: #lights-obj;" scale=".01 .01 .01" material="color: #5a5a5a"></a-entity>
-    <a-entity obj-model="obj: #canvas-obj; mtl: #canvas-mtl;" scale=".01 .01 .01"></a-entity>
+    <a-entity gltf-model="#canvas-glb"></a-entity>
 
     <a-entity scale="24 24 24">
       <a-entity geometry="primitive: plane;"
