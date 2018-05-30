@@ -87,7 +87,7 @@ AFRAME.registerComponent('cursor-listener', {
 
     <!-- This is the thing the user looks out of -->
     <a-entity id="rig" movement-controls="constrainToNavMesh: true">
-      <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true">
+      <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true" teleport-controls>
         <a-entity cursor position="0 0 -0.05" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002" material="color: #f0a; shader: flat;"></a-entity>
       </a-entity>
     </a-entity>
