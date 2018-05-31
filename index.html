@@ -16,6 +16,19 @@ AFRAME.registerComponent('cursor-listener', {
     });
   }
 });
+<!-- This hides the cursor when in vr. -->
+AFRAME.registerComponent('curseor', {
+  init: function () {
+    var sceneEl = document.querySelector('a-scene');
+    var entityEl = this.el;
+    sceneEl.addEventListener('enter-vr', function () {
+      entityEl.object3D.visible = false;
+    });
+    sceneEl.addEventListener('exit-vr', function () {
+      entityEl.object3D.visible = true;
+    });
+  }
+});
 </script>
 
 <body>
@@ -88,7 +101,7 @@ AFRAME.registerComponent('cursor-listener', {
     <!-- This is the thing the user looks out of -->
     <a-entity id="rig" movement-controls="constrainToNavMesh: true">
       <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true" teleport-controls>
-        <a-entity cursor position="0 0 -0.05" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002" material="color: #f0a; shader: flat;"></a-entity>
+        <a-entity cursor curseor position="0 0 -0.05" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002" material="color: #f0a; shader: flat;"></a-entity>
       </a-entity>
     </a-entity>
   </a-scene>
