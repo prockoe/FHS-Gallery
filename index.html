@@ -87,7 +87,8 @@ AFRAME.registerComponent('curseor', {
     <a-entity obj-model="obj: #skylights-obj;" scale=".01 .01 .01"  material="color: #dde; emissive: #dde;"></a-entity>
     <a-entity obj-model="obj: #lights-obj;" scale=".01 .01 .01" material="color: #5a5a5a"></a-entity>
     <a-entity scale="24 24 24">
-      <a-entity geometry="primitive: plane;"
+      <a-entity id="floor"
+                geometry="primitive: plane;"
                 rotation="-90 0 0"
                 visible="false"
                 nav-mesh></a-entity>
@@ -100,9 +101,10 @@ AFRAME.registerComponent('curseor', {
 
     <!-- This is the thing the user looks out of -->
     <a-entity id="rig" movement-controls="constrainToNavMesh: true">
-      <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true" teleport-controls>
+      <a-entity position="0 1.6 0" camera look-controls="pointerLockEnabled:true">
         <a-entity cursor curseor position="0 0 -0.05" geometry="primitive: ring; radiusInner: 0.001; radiusOuter: 0.002" material="color: #f0a; shader: flat;"></a-entity>
       </a-entity>
     </a-entity>
+    <a-entity curseor teleport-controls="type: parabola; collisionEntities: #floor;"></a-entity>
   </a-scene>
 </body>
