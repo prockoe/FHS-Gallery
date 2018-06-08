@@ -46,13 +46,15 @@ AFRAME.registerComponent('curseor', {
       <img id="social-phone" src="artwork/social phone.jpg">
     </a-assets>
 
-    <a-box cursor-listener position="-5 0.5 -3" rotation="0 45 0" material="color: #4CC3D9">
-      <a-sphere position="0 1 0" scale=".25 .25 .25">
-        <a-animation attribute="position" to="0 1.25 0" direction="alternate" dur="750" repeat="indefinite"></a-animation>
+    <a-entity scale=".25 .25 .25" position="-10 0 -10">
+      <a-box cursor-listener position="-5 0.5 -3" rotation="0 45 0" material="color: #4CC3D9">
+        <a-sphere position="0 1 0" scale=".25 .25 .25">
+          <a-animation attribute="position" to="0 1.25 0" direction="alternate" dur="750" repeat="indefinite"></a-animation>
       </a-sphere>
-    </a-box>
-    <a-sphere cursor-listener position="-4 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-    <a-cylinder cursor-listener position="-3 0.85 -3" radius="0.5" height="1.6" color="#FFC65D"></a-cylinder>
+      </a-box>
+      <a-sphere cursor-listener position="-4 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder cursor-listener position="-3 0.85 -3" radius="0.5" height="1.6" color="#FFC65D"></a-cylinder>
+    </a-entity>
 
     <!-- Default lighting injected by A-Frame. -->
     <a-light type="ambient" intensity="1" color="#BBB"></a-light>
