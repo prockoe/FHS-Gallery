@@ -58,7 +58,7 @@ AFRAME.registerComponent('curseor', {
       <img id="senior-typo" src="artwork/senior-showcase/typomancer-foe.jpg">
     </a-assets>
 
-    <a-entity scale=".25 .25 .25" position="-10 0 -10">
+    <a-entity rotation="0 -90 0" position="5 0 4">
       <a-box cursor-listener position="-5 0.5 -3" rotation="0 45 0" material="color: #4CC3D9">
         <a-sphere position="0 1 0" scale=".25 .25 .25">
           <a-animation attribute="position" to="0 1.25 0" direction="alternate" dur="750" repeat="indefinite"></a-animation>
@@ -117,23 +117,23 @@ AFRAME.registerComponent('curseor', {
       <a-box position="0 0 -0.09" scale="3 4.5 0.15"></a-box>
     </a-entity>
 
-    <a-entity position="2.5 2.5 -12.25" geometry="primitive: plane; height: 3; width: 4" material="src:#senior-apple;">
+    <a-entity scale=".75 .75 .75" position="2.5 2.5 -12.25" geometry="primitive: plane; height: 3; width: 4" material="src:#senior-apple;">
       <a-box position="0 0 -0.09" scale="4 3 0.15"></a-box>
     </a-entity>
 
-    <a-entity position="2.5 2.5 12.25" rotation="0 180 0" geometry="primitive: plane; height: 3; width: 5" material="src:#senior-creepy;">
+    <a-entity position="2.5 2.5 12.25" rotation="0 180 0" scale=".85 .85 .85" geometry="primitive: plane; height: 3; width: 5" material="src:#senior-creepy;">
       <a-box position="0 0 -0.09" scale="5 3 0.15"></a-box>
     </a-entity>
 
-    <a-entity position="1.35 2.5 -12.25" geometry="primitive: plane; height: 3; width: 4" material="src:#senior-forest;">
+    <a-entity position="-7.5 2.5 12.25" rotation="0 180 0" geometry="primitive: plane; height: 3; width: 4" material="src:#senior-forest;">
       <a-box position="0 0 -0.09" scale="4 3 0.15"></a-box>
     </a-entity>
 
-    <a-entity position="1.35 2.5 -12.25" geometry="primitive: plane; height: 4; width: 3" material="src:#senior-game;">
-      <a-box position="0 0 -0.09" scale="3 4 0.15"></a-box>
+    <a-entity position="7.5 2.5 12.25" rotation="0 180 0" scale=".85 .85 .85" geometry="primitive: plane; height: 3; width: 5" material="src:#senior-car;">
+      <a-box position="0 0 -0.09" scale="5 3 0.15"></a-box>
     </a-entity>
 
-    <a-entity position="1.35 2.5 -12.25" geometry="primitive: plane; height: 3; width: 4" material="src:#senior-cycle;">
+    <a-entity position="-2.5 2.5 12.25" rotation="0 180 0" geometry="primitive: plane; height: 3; width: 4" material="src:#senior-cycle;">
       <a-box position="0 0 -0.09" scale="4 3 0.15"></a-box>
     </a-entity>
 
@@ -141,6 +141,21 @@ AFRAME.registerComponent('curseor', {
       <a-box position="0 0 -0.09" scale="5 3 0.15"></a-box>
     </a-entity>
 
+    <a-entity position="7.5 2.5 -12.25" geometry="primitive: plane; height: 3; width: 4.5" material="src:#senior-smoky;">
+      <a-box position="0 0 -0.09" scale="4.5 3 0.15"></a-box>
+    </a-entity>
+
+    <a-entity scale=".5 .5 .5" position="-12.25 2.5 0" rotation="0 90 0" geometry="primitive: plane; height: 7; width: 8" material="src:#senior-tripus;">
+      <a-box position="0 0 -0.09" scale="8 7 0.15"></a-box>
+    </a-entity>
+
+    <a-entity scale=".5 .5 .5" position="-12.25 2.5 5" rotation="0 90 0" geometry="primitive: plane; height: 7; width: 8" material="src:#senior-dudes;">
+      <a-box position="0 0 -0.09" scale="8 7 0.15"></a-box>
+    </a-entity>
+
+    <a-entity scale=".5 .5 .5" position="-12.25 2.5 -5" rotation="0 90 0" geometry="primitive: plane; height: 7; width: 8" material="src:#senior-typo;">
+      <a-box position="0 0 -0.09" scale="8 7 0.15"></a-box>
+    </a-entity>
 
     <!-- This is the thing the user looks out of -->
     <a-entity id="rig" movement-controls="constrainToNavMesh: true">
